@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton Loading</title>
+    <style>
+      .card {
+        background-color: white;
+        height: fit-content;
+        border-radius: 5px;
+        box-shadow: 3px 3px 4px grey;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .loading {
+        background-color: rgb(220, 220, 220);
+        background-image: linear-gradient(
+          to right,
+          rgb(96, 91, 91),
+          rgb(160, 160, 160) 70%
+        );
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 100%;
+        border-radius: 3px;
+
+        animation-duration: 1s;
+        animation-name: shimmerloading;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes shimmerloading {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(223, 223, 235)">
+    <section class="card">
+      <div class="loading"></div>
+      <div class="loading"></div>
+      <div class="loading"></div>
+      <div class="loading"></div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2eae2;
+}
+.container {
+  height: fit-content;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-container {
+  height: 450px;
+  width: 50%;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px; */
+}
+
+.content-container {
+  width: 50%;
+  padding: 32px;
+}
+
+#tag {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #6c7289;
+}
+
+#title {
+  font-family: "Fraunces";
+  font-size: 32px;
+  color: #1c232b;
+  margin-top: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+#description {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 25px;
+  color: #6c7289;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 29px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.price span:nth-child(1) {
+  color: #3d8168;
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.price span:nth-child(2) {
+  color: #6c7289;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 13px;
+  /* margin-top: 34px;
+  margin-left: 19px; */
+  text-decoration: line-through;
+}
+
+#button-cart {
+  background-color: #3d8168;
+  border: none;
+  width: 100%;
+  height: 48px;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11.61px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+#button-cart:hover {
+  background-color: #1a4032;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    max-width: 343px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .content-container,
+  .image-container {
+    width: 100%;
+  }
+}

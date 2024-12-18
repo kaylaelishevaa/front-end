@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Whack a Mole! <span class="score">0</span></h1>
+    <button class="start-btn">Start!</button>
+    <div class="game-container">
+      <div class="hole hole1 up">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+      </div>
+    </div>
+
+    <script>
+        const holes = document.querySelectorAll(".hole");
+        const moles = document.querySelectorAll(".mole")
+        const scoreBoard = document.querySelector(".score"); 
+        const startBtn = document.querySelector(".start-btn")
+
+        function randomHole(holes) {
+            const choosenHoleIndex = Math.floor(Math.random () * holes.length);
+            const choosenHole = holes[choosenHoleIndex];
+            return choosenHole;
+        }
+
+        function peep () {
+            const targetHole = randomHole(holes)
+            targetHole.classList.add("up");
+            setTimeout(() => {
+                targetHole.classList.remove("up")
+            }, 1000);
+        }
+
+        function startGame () {
+            peep();
+        }
+    </script>
+  </body>
+</html>
